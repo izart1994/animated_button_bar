@@ -118,15 +118,16 @@ class _AnimatedButtonBarState extends State<AnimatedButtonBar> {
                                     child: Padding(
                                       padding: EdgeInsets.symmetric(
                                           vertical: widget.innerVerticalPadding),
-                                      child: Center(
-                                          child: ColorFiltered(
-                                              colorFilter: ColorFilter.mode(
-                                                  backgroundColor,
-                                                  widget.invertedSelection &&
-                                                      animatedButton.index == i
-                                                      ? BlendMode.srcIn
-                                                      : BlendMode.dstIn),
-                                              child: sideButton.child)),
+                                      child: Center(child:Container(child: sideButton.child,),),
+                                      // child: Center(
+                                      //     child: ColorFiltered(
+                                      //         colorFilter: ColorFilter.mode(
+                                      //             backgroundColor,
+                                      //             widget.invertedSelection &&
+                                      //                 animatedButton.index == i
+                                      //                 ? BlendMode.srcIn
+                                      //                 : BlendMode.dstIn),
+                                      //         child: sideButton.child)),
                                     ),
                                   ),
                                 ),
